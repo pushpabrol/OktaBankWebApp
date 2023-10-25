@@ -1,0 +1,40 @@
+<%- include('partials/header') -%>
+
+
+
+<% if (locals.isAuthenticated) { %>
+<main class="main-content">
+    <section class="account-section">
+        <h1 class="account-title">Welcome to ▲ Bank, <%= locals.user.email %>!</h1>
+        <p class="account-info">
+            Below are your account balances:
+        </p>
+        <div class="account-list">
+            <div class="account">
+                <h2 class="account-name">Checking Account</h2>
+                <p class="account-balance">$5,230.50</p>
+            </div>
+            <div class="account">
+                <h2 class="account-name">Savings Account</h2>
+                <p class="account-balance">$12,750.25</p>
+            </div>
+            <div class="account">
+                <h2 class="account-name">Investment Account</h2>
+                <p class="account-balance">$45,890.75</p>
+            </div>
+        </div>
+    </section>
+  </main>
+  <% } else { %>
+    <main class="main-content">
+        <section class="welcome-section">
+            <h1 class="app-title">▲ Bank  </h1>
+                <p class="user-status">You are not logged in. <a href="/login" class="login-link">Login</a>.</p>
+            
+        </section>
+    </main>
+
+    <% } %>
+
+<%- include('partials/footer') -%>
+

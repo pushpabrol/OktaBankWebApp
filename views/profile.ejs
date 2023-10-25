@@ -1,0 +1,16 @@
+<%- include('partials/header') -%>
+<main class="main-content">
+    <section class="welcome-section">
+        <h1 class="welcome-title">Welcome <%= user.nickname %></h1>
+        <% if (user.picture) { %>
+            <img class="profile-image" src="<%= user.picture %>" alt="Profile Picture" width="300">
+        <% } %>
+        <p class="user-info">
+            This is the content of <code class="info-code">req.user</code>.<br>
+            <strong>Note:</strong> <code class="info-code">_raw</code> and <code class="info-code">_json</code> properties have been omitted.
+        </p>
+        <pre class="user-profile"><%= userProfile %></pre>
+    </section>
+</main>
+
+<%- include('partials/footer') -%>

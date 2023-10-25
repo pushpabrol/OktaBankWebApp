@@ -1,0 +1,9 @@
+<%- include('partials/header') -%>
+
+<main class="main-content">
+    <section class="error-section">
+        <h1 class="error-title">💣 <%= error.status || "ERROR" %>: <%= message || "Error" %></h1>
+    </section>
+</main>
+
+<%- include('partials/footer') -%>

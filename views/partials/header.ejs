@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>▲ Bank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="app-header">
+    <nav class="nav-container">
+        <div class="logo">▲ Bank</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Accounts</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <% if (locals.user) { %>
+                <li><a  href="/logout" 
+                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Logout</a></li>
+            <% } else { %>
+                <l><a  href="/login" 
+                    class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Login</a></l>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+                
