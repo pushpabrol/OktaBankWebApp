@@ -1,11 +1,10 @@
 <%- include('partials/header') -%>
 
 
-
 <% if (locals.isAuthenticated) { %>
 <main class="main-content">
     <section class="account-section">
-        <h1 class="account-title">Welcome to ▲ Bank, <%= locals.user.email %>!</h1>
+        <h1 class="account-title">Welcome to Okta Bank, <%= locals.user.email %>!</h1>
         <p class="account-info">
             Below are your account balances:
         </p>
@@ -28,7 +27,7 @@
   <% } else { %>
     <main class="main-content">
         <section class="welcome-section">
-            <h1 class="app-title">▲ Bank  </h1>
+            <h1 class="app-title">Okta Bank  </h1>
                 <p class="user-status">You are not logged in. <a href="/login" class="login-link">Login</a>.</p>
             
         </section>
